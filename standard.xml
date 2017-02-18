@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem>                                   <!-- a good old programming problem -->
+    <title>Hello, World!!</title>           <!-- Title for display and search -->
+    <id>1.1.1</id>                          <!-- Id for search -->
+    <tags>BG ST</tags>                      <!-- Specify some key features -->
+    <!-- All Tags
+    OO Object Oriented  FP Functional Programming  BG For Beginners   AL Algorithm  MA Math Heavy
+    ST String Minipulation  IO File IO  DT Data Type  DA Data Analysis -->
+    <description>
+        <p>Print Hello World On Screen</p>    <!-- p for paragraph -->
+        <p>Should be exactly "Hello, World!!" </p>
+    </description>
+    <example-in/>                             <!-- example input, in this case, no input -->
+    <example-out>                             <!-- example output -->
+        <p>Hello, World!!</p>
+    </example-out>
+    <spacing-critical/>                       <!-- if tag <spacing-critical/> exists, whitespaces before and between text will be checked -->
+                                              <!-- this should only be set on question like "printing a triangle" -->
+
+    <!-- only one time related tags should exist -->
+    <time-easy/>                            <!-- set 1 1 1 for time -->
+    <time-normal/>                          <!-- set 5 10 15 for time-->
+    <time>                                  <!-- time tag specifys the required time for running -->
+        <ctime>1</ctime>                    <!-- time for fully compiled language like c -->
+        <btime>2</btime>                    <!-- time for bytecode language like java -->
+        <itime>4</itime>                    <!-- time for interpreted languages like Python -->
+    </time>                                 <!-- by default, set time to 1 1 1 -->
+
+    <tests>                                 <!-- the testing part -->
+        <test>                              <!-- a normal test -->
+            <out>Hello, World!!</out>       <!-- when only having a single line, <l> can be omitted-->
+        </test>                             <!-- no <in> for no input-->
+        <test>
+            <in>2</in>                              <!-- <in> for input -->
+            <out>                                   <!-- <out> for output -->
+                <l>Hello, World!!</l>               <!-- <l> for line, violation of line breaks is an error -->
+                <l indent="5">Hello, World!!</l>    <!-- indent will override looking for format space before in text -->
+                                                    <!-- <l>   a</l> is the same as <l indent="3">a</l> in <spacing-critical/> mode -->
+            </out>
+        </test>
+        <err-test>                          <!-- <err-test> is a input error handling test (optional) -->
+            <in>foo</in>                    <!-- this is an input error -->
+            <error-message/>                <!-- stands for the standard error message "ERROR" and return code 1 -->
+        </err-test>
+        <err-test>
+            <in>bar</in>
+            <out>BAR ERROR</out>            <!-- in err-test, out receives message from both stderr (first and advised) and stdout -->
+            <return-code>3</return-code>    <!-- specify a return code -->
+        </err-test>                         <!-- a standard test will only pass if stderr outputs nothing and return code is 0 -->
+    </tests>
+</problem>
