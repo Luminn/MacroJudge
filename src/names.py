@@ -35,6 +35,7 @@ COMPILERS_DISPLAY_NAMES = [
     "PHP",
     "Node.js",
     "Go",
+    "GNU Octave (Matlab)",
     "Mono C# Compiler",
     "Mono VB.NET Compiler",
     "Mono F# Compiler"
@@ -62,6 +63,7 @@ COMPILERS_INFO = {
     "PHP": ("php", "php"),
     "Node.js": ("node", "javascript"),
     "Go": ("go", "go"),
+    "GNU Octave (Matlab)" : ("octave", "matlab"),
     "Mono C# Compiler" : ("mcs", "C#"),
     "Mono VB.NET Compiler" : ("vbnc", "VB.NET"),
     "Mono F# Compiler" : ("fsharpc", "F#")
@@ -115,7 +117,7 @@ standard_compilers = [
 
 # interpreters that supports "python src.py" like syntax
 standard_interpreters = [
-    'python2', 'python3', 'ruby', 'clisp', 'guile', 'racket', 'perl', 'bash', 'php', 'nodejs', 'node'
+    'python2', 'python3', 'ruby', 'clisp', 'guile', 'racket', 'perl', 'bash', 'php', 'nodejs', 'node', 'octave'
 ]
 
 # match file extensions and compiler names
