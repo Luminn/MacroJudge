@@ -1,5 +1,5 @@
 # MacroJudge
-A open programming judge client that aims to support as much programming languages as possible.
+A open programming judge client that aims to support as many programming languages as possible.
 
 ### Supported Languages:
 This is a list of programming languages that we currently supports:
